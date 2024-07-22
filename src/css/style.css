@@ -1,0 +1,295 @@
+/* Подключение шрифта Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #f0f0f0; /* Нейтральный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Полная высота окна */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%; /* Ограничиваем ширину контейнера */
+  max-width: 1000px; /* Максимальная ширина */
+  margin: 0 auto;
+}
+
+.collapse-container {
+  padding: 7.5px;
+  overflow: hidden;
+  height: 55px;
+  transition: height 0.5s ease;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 600px; /* Ограничиваем ширину блока */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.collapse-container.active {
+  height: 200px;
+}
+
+.collapse-button {
+  padding: 12px;
+  background-color: #007bff; /* Новый цвет */
+  color: #ffffff;
+  width: 120px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+.collapse-button:hover {
+  background-color: #0056b3; /* Новый цвет при наведении */
+  border: 1px solid #007bff;
+}
+
+.collapse-par {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #ffffff;
+  color: #333333; /* Более тёмный текст */
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  width: 400px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-form {
+  position: relative;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-heading {
+  font-weight: 700;
+  font-size: 24px;
+  color: #333333; /* Новый цвет заголовка */
+}
+
+.chat-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.chat-send {
+  padding: 12px;
+  border: 1px solid #d0d0d0;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  width: 320px;
+  margin-top: 15px;
+}
+
+.chat-cta {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ff5722; /* Новый цвет */
+  right: 15px;
+  bottom: 15px;
+  opacity: 1;
+  transition: width 0.2s, height 0.2s, right 0.2s, bottom 0.2s;
+  cursor: pointer;
+}
+
+.chat-cta:hover {
+  width: 70px;
+  height: 70px;
+  right: 10px;
+  bottom: 10px;
+}
+
+.chat-input {
+  border-radius: 8px;
+  margin: 15px 0;
+  resize: none;
+  outline: none;
+  width: 320px;
+  height: 200px;
+  border: 1px solid #d0d0d0;
+  padding: 10px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.like-container {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.like {
+  position: absolute;
+  bottom: 30px;
+  height: 240px;
+  width: 180px;
+}
+
+.like-btn {
+  position: absolute;
+  bottom: 40px;
+  background-color: #ff0000; /* Новый цвет кнопки */
+  padding: 12px 40px;
+  border-radius: 8px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  width: 120px;
+}
+
+.like-img {
+  position: absolute;
+  animation: heart1 600ms ease-out;
+}
+
+@keyframes heart1 {
+  0% {
+    opacity: 1;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  25% {
+    left: 25%;
+    transform: translateX(-25%);
+  }
+  50% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  75% {
+    left: 75%;
+    transform: translateX(-75%);
+  }
+  100% {
+    opacity: 0;
+    bottom: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes heart2 {
+  0% {
+    opacity: 1;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  25% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  50% {
+    left: 75%;
+    transform: translateX(-75%);
+  }
+  75% {
+    left: 25%;
+    transform: translateX(-25%);
+  }
+  100% {
+    opacity: 0;
+    bottom: 210px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes heart3 {
+  0% {
+    opacity: 1;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  25% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  50% {
+    left: 25%;
+    transform: translateX(-25%);
+  }
+  75% {
+    left: 75%;
+    transform: translateX(-75%);
+  }
+  100% {
+    opacity: 0;
+    bottom: 210px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes heart4 {
+  0% {
+    opacity: 1;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  25% {
+    left: 75%;
+    transform: translateX(-75%);
+  }
+  50% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  75% {
+    left: 25%;
+    transform: translateX(-25%);
+  }
+  100% {
+    opacity: 0;
+    bottom: 210px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.none {
+  display: none;
+}
